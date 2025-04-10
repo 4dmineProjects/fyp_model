@@ -21,6 +21,12 @@ def clean_text(text):
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
+
+@app.route('/', methods=['GET'])
+def check():
+    return 'App is Working'
+
+
 @app.route('/predict_r', methods=['POST'])
 def predict():
     try:
